@@ -1,5 +1,5 @@
 import discord
-from blackJack import playerHand,dealerHand,findTotal,dealCard,findWinner,blackJackNumber,restartGame,generateCard,dealAll
+from blackJack import playerHand,dealerHand,findTotal,dealCard,blackJackNumber,restartGame,generateCard,dealAll
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix="!",intents=discord.Intents.all())
