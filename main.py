@@ -59,4 +59,4 @@ async def bj(ctx):
 
 # @bot.command(aliases=['user'])
 # async def bjrules
-bot.run("MTA0MzM2MzAzNDkwNDY3MDI2MA.GmpO58.q3Dw-OK2MQxZlNBu3O2_kuj4yvGrC99iNoTp7Q")
+bot.run("")#add your discord token
