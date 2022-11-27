@@ -39,21 +39,9 @@ def findTotal(person):
                 sum += 11
     return sum
 
-#sets conditions to win the game and also finds who the winner is
-def findWinner():
-    global blackJackNumber
-    if findTotal(playerHand) == blackJackNumber or findTotal(dealerHand) > blackJackNumber or blackJackNumber - findTotal(dealerHand) > blackJackNumber - findTotal(playerHand):
-        winner = "You"
-    if findTotal(dealerHand) == blackJackNumber or findTotal(playerHand) > blackJackNumber or blackJackNumber - findTotal(dealerHand) < blackJackNumber - findTotal(playerHand):
-        winner = "Dealer"
-    if findTotal(playerHand) == blackJackNumber and findTotal(dealerHand) == blackJackNumber or findTotal(playerHand) > blackJackNumber and findTotal(dealerHand) > blackJackNumber:
-        winner = "No one"
-    return winner
-
-
 #makes the dealer hit when the deck is lower than 16
 def dealDealerCard():
-    if findTotal(dealerHand) < 16:
+    if findTotal(dealerHand) < 15:
         dealCard(dealerHand)
 
 #deals everyone cards
@@ -61,7 +49,9 @@ def dealAll():
     for i in range (2):
         dealCard(dealerHand)
         dealCard(playerHand)
-        dealDealerCard()
+    dealDealerCard()
+
+
 
 
 
